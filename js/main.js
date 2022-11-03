@@ -75,6 +75,7 @@ insert_form.addEventListener("submit", function(e){
 
     e.preventDefault();
 
+    /* Add values into the array from inputs */
     getWords.push({
         id: uuidv4(),
         foreign: foreign_word.value,
@@ -93,4 +94,20 @@ insert_form.addEventListener("submit", function(e){
     foreign_word.value = "";
     native_word.value = "";
 
+});
+
+/* Add words from JSON to page */
+
+let show_list = document.getElementById("show_list");
+
+show_list.addEventListener("click", function(){
+
+    var my_storage = localStorage.getItem("practice");
+
+    var my_storage_JSON = JSON.parse(my_storage);
+
+    my_storage_JSON.forEach(function(oneWord){
+        const oneWordHTML = generateHTML(oneWord);
+        document.getElementById("list").appendChild(oneWordHTML);
+    });
 });

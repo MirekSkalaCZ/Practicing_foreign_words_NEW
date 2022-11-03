@@ -15,5 +15,5 @@ printText();
 /**** Input Values ****/
 
 const czechConfirm = function(){
-let confirm_text = document.getElementById("confirm_text").textContent ="Slova se uložila, můžete přidat další";
+    let confirm_text = document.getElementById("confirm_text").textContent = "Slova se uložila, můžete přidat další";
 }
