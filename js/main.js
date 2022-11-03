@@ -1,34 +1,5 @@
 /* Main scripts for all html files */
 
-/**** Dark mode ****/
-
-let icon_dm = document.getElementById("icon_dm");
-
-if(localStorage.getItem("theme") == null){
-    localStorage.setItem("theme", "light"); 
-}
-
-let localData = localStorage.getItem("theme");
-
-if(localData == "light") {
-    icon_dm.src = "images/moon.png";
-    document.body.classList.remove("dark_theme");
-}   else if (localData == "dark") {
-    icon_dm.src = "images/sun.png";
-    document.body.classList.add("dark_theme");
-}
-
-icon_dm.addEventListener ("click", function(){
-    document.body.classList.toggle("dark_theme");
-    if(document.body.classList.contains("dark_theme")){
-        icon_dm.src = "images/sun.png";
-        localStorage.setItem("theme", "dark");
-    }   else {
-        icon_dm.src = "images/moon.png";
-        localStorage.setItem("theme", "light");
-    }
-});
-
 /**** Welcome Text ****/
 
 function printText(){
@@ -85,7 +56,7 @@ insert_form.addEventListener("submit", function(e){
     saveWords(getWords);
 
     /* Confirm Text and Timer */
-    czechConfirm();
+    confirm();
     setTimeout(function(){
         confirm_text.textContent = "";
     }, 1500);
@@ -94,6 +65,82 @@ insert_form.addEventListener("submit", function(e){
     foreign_word.value = "";
     native_word.value = "";
 
+    /* Input focus after submit */
+    foreign_word.focus();
+
+});
+
+
+/**** First Practice ****/
+
+var my_storage = localStorage.getItem("practice");
+
+var my_storage_JSON = JSON.parse(my_storage);
+
+/* Object Length */
+
+let object_length = my_storage_JSON.length;
+
+/* Randomize Function */
+
+let btn_randomize = document.getElementById("randomize_btn");
+
+let random_foreign = document.getElementById("random_foreign_word");
+
+let random_native = document.getElementById("random_native_word");
+
+/* Result text + second practice */
+
+let practice_result = document.getElementById("practice_result");
+
+let practice_form = document.getElementById("practice_form");
+
+let native_word_practice = document.getElementById("native_word_practice");
+
+/* Score */
+
+var round_count = 0;
+
+var score = 0;
+
+var percents = 0;
+
+btn_randomize.addEventListener("click", function(){
+    /* Add round value + 1 */
+    round_count++;
+    /* Reset values */
+    random_foreign.innerText = "";
+    random_native.innerText = "";
+    practice_result.innerHTML = "";
+    native_word_practice.value = "";
+    /* Generate Random Number */
+    var random_number = Math.ceil((Math.random() * object_length) - 1);   
+    /* Show random word from array */
+    random_foreign.innerText = my_storage_JSON[random_number].foreign;
+    random_native.innerText = my_storage_JSON[random_number].native;
+
+    /**** Second Practice ****/
+    practice_form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        if(native_word_practice.value == my_storage_JSON[random_number].native){
+            trueText();
+            score++;
+        }   else {
+            falseText();
+        }
+
+        document.getElementById("round_count").innerText = round_count;
+
+        document.getElementById("score").innerText = score;
+
+        percents = score * 100 / round_count;
+        let rounded = percents.toFixed(1);
+
+        document.getElementById("percents").innerText = rounded;
+            
+        });  
 });
 
 /* Add words from JSON to page */
@@ -111,3 +158,6 @@ show_list.addEventListener("click", function(){
         document.getElementById("list").appendChild(oneWordHTML);
     });
 });
+
+
+

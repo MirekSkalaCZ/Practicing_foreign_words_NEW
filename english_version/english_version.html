@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practicing foreign words</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/queries.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+    <body>
+        
+        <header>
+            <div class="container">
+                <div class="language row">
+                    <a href="../index.html"><img src="../images/czech_flag.png"class="icon_flag"></a> 
+                    <a href="#"><img src="../images/moon.png" id="icon_dm"></a>
+                </div>
+                <!-- Welcome text -->
+                <div class="welcome_text">
+                    <h1 id="text"></h1>
+                </div>
+                <nav>
+                    <a id="btn1">Add word</a>
+                    <a id="btn2">Start practicing</a>
+                    <a id="btn3">List of words</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Insert Foreign a Native words -->
+            <section>
+                <div class="container">
+                    <div id="window1" class="window">
+                        <div class="insert_words">
+                            <div class="input">
+                                <form id="insert_form">
+                                    <input type="text" name="foreign_word" id="foreign_word" placeholder="Type a foreign word" required>
+                                    <input type="text" name="native_word" id="native_word" placeholder="Type a native word" required>
+                                    <div class="btn">
+                                        <input type="submit"
+                                        id="btn_insert_submit" value="Submit">
+                                    </div>
+                                </form>
+                                <p id="confirm_text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Practice section -->
+            <section>
+                <div class="container">
+                    <div id="window2" class="window">
+                        <div class="practice">
+                                <!-- Score -->
+                                <div class="total_score">
+                                    <p><span id="score">0</span> / <span id="round_count">0</span> (<span id="percents">0</span>%)</p>
+                                </div>
+        
+                                <!-- First Practice -->
+                                <div class="first_practice">
+                                    <div class="flip_box">
+                                        <div class="flip_box_inner">
+                                            <div class="flip_box_front">
+                                                <h2 id="random_foreign_word"></h2>
+                                            </div>
+                                            <div class="flip_box_back">
+                                                <h2 id="random_native_word"></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="randomize_btn btn">
+                                    <p id="randomize_btn">Show the word</p>
+                                </div>
+        
+                                <!-- Second Practice -->
+                                <div class="second_practice input">
+                                    <p id="practice_result"></p>
+                                    <form id="practice_form">
+                                        <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Type a native word">
+                                        <div class="btn">
+                                            <input type="submit" id="btn_practice_submit" value="Submit">
+                                        </div>
+                                    </form>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Word List -->
+            <section>
+                <div class="container">
+                    <div id="window3" class="window">
+                        <div class="word_list">
+                            <div id="list">
+                            </div>
+                            <div class="btn">
+                                <p id="show_list">Show list</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer_section">
+                <div class="footer_text">
+                    <p><span>Contact:</span></p>
+                    <a href="mailto:mirek.skala@seznam.cz">E-Mail</a>
+                    <br>
+                    <p><span>Web page:</span></p>
+                    <a href="https://motyli-prahy.cz" target="_blank">Motýli Prahy</a>
+                    <p>Copyright &copy; 2022 Miroslav Skála. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../js/uuidv4.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="english_version.js"></script>
+    </body>
+</html>
