@@ -272,6 +272,16 @@ nav a:hover {
 
 /****************************************************/
 
+/**** Word List ****/
+
+.word_list {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/****************************************************/
+
 /**** Footer ****/
 
 .footer_section {
