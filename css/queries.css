@@ -1,0 +1,40 @@
+@media screen and (max-width: 1150px) {
+
+    #icon_dm {
+        margin-right: 15px;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    nav a {
+        padding: 5px 10px;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    nav a {
+        display: block;
+        margin: 0 55px;
+    }
+
+    .footer_section {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .welcome_text {
+        position: absolute;
+    }
+
+    nav {
+        margin-top: 200px;
+    }
+
+}

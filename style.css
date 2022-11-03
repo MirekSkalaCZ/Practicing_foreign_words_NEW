@@ -270,11 +270,13 @@ nav a:hover {
     position: relative;
     text-align: center;
     margin-top: 100px;
+    color: var(--primary-color-text);
 }
 
 #list {
     display: block;
-    min-width: 500px;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 #list div {
@@ -283,17 +285,24 @@ nav a:hover {
 
 #list span {
     margin: 50px 50px;
+    width: 150px;
 }
 
 #list button {
     background-color: transparent;
     border: none;
-    margin-left: 20px;
     cursor: pointer;
+    color: var(--primary-color-text);
+    max-width: 50px;
 }
 
 #list button:hover {
     color: orange;
+}
+
+.fa-trash-alt:before, .fa-trash-can:before {
+    text-align: center;
+    margin: 25px;
 }
 
 /****************************************************/
@@ -301,7 +310,10 @@ nav a:hover {
 /**** Footer ****/
 
 .footer_section {
-    margin-top: 60vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 110px;
     text-align: center;
 }
 
