@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--primary-color-background);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/****************************************************/
+
+/**** Welcome text ****/
+
+.welcome_text {
+    position: relative;
+    text-align: center;
+    margin-top: 80px;
+    color: var(--primary-color-text);
+}
+
+.welcome_text h1 {
+    font-size: 35px;
+}
+
+/**** Change Language + Dark mode ****/
+
+/* Icons */
+
+.language {
+    text-align: right;
+    margin-top: 25px;
+}
+
+.icon_flag {
+    max-width: 25px;
+    cursor: pointer;
+}
+
+.icon_flag:hover {
+    opacity: 0.7;
+}
+
+/* Dark mode */
+
+#icon_dm {
+    max-width: 25px;
+    cursor: pointer;
+}
+
+#icon_dm:hover {
+    opacity: 0.7;
+}
+
+:root {
+    --primary-color-text: black;
+    --secondary-color-text: white;
+    --primary-color-background: whitesmoke;
+    --secondary-color-background: rgb(39,38,39);
+}
+
+.dark_theme {
+    --primary-color-text: white;
+    --secondary-color-text: black;
+    --primary-color-background: rgb(39,38,39);
+    --secondary-color-background: whitesmoke;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/****************************************************/
+
+/**** Footer ****/
+
+.footer_section {
+    margin-top: 250px;
+    text-align: center;
+}
+
+.footer_text span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer_text a {
+    text-decoration: none;
+    color: var(--primary-color-text);
+    cursor: pointer;
+}
+
+.footer_text a:hover {
+    color: orange;
+}
+
+.footer_text a:focus {
+    outline: none;
+}
+
+.footer_text {
+    margin-top: 10px;
+    color: var(--primary-color-text);
+}
+
+.copyright {
+    position: relative;
+    padding-top: 140px;
+    text-align: center;
+}
