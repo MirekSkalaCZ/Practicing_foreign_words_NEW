@@ -22,21 +22,87 @@
                 <div class="welcome_text">
                     <h1 id="text"></h1>
                 </div>
+                <nav>
+                    <a id="btn1">Vložit slovo</a>
+                    <a id="btn2">Začni procvičovat</a>
+                    <a id="btn3">Seznam slov</a>
+                    <a href="">1000 slov</a>
+                </nav>
             </div>
         </header>
 
         <main>
             <!-- Insert Foreign a Native words -->
             <section>
-
+                <div class="container">
+                    <div id="window1" class="window">
+                        <div class="insert_words">
+                            <div class="input">
+                                <form id="insert_form">
+                                    <input type="text" name="foreign_word" id="foreign_word" placeholder="Napište cizí slovo" required>
+                                    <input type="text" name="native_word" id="native_word" placeholder="Napište český překlad" required>
+                                    <div class="btn">
+                                        <input type="submit"
+                                        id="btn_insert_submit" value="Odeslat">
+                                    </div>
+                                </form>
+                                <p id="confirm_text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- Practice section -->
             <section>
-
+                <div class="container">
+                    <div id="window2" class="window">
+                        <div class="practice">
+                                <!-- Score -->
+                                <div class="total_score">
+                                    <p><span id="score">0</span> / <span id="round_count">0</span> (<span id="percents">0</span>%)</p>
+                                </div>
+        
+                                <!-- First Practice -->
+                                <div class="first_practice">
+                                    <div class="flip_box">
+                                        <div class="flip_box_inner">
+                                            <div class="flip_box_front">
+                                                <h2 id="random_foreign_word"></h2>
+                                            </div>
+                                            <div class="flip_box_back">
+                                                <h2 id="random_native_word"></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="randomize_btn">
+                                    <p id="randomize_btn">Ukaž slovo</p>
+                                </div>
+        
+                                <!-- Second Practice -->
+                                <div class="second_practice input">
+                                    <p id="practice_result"></p>
+                                    <form id="practice_form">
+                                        <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Napište český překlad">
+                                        <div class="btn">
+                                            <input type="submit" id="btn_practice_submit" value="Odeslat">
+                                        </div>
+                                    </form>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- Word List -->
             <section>
+                <div class="container">
+                    <div id="window3" class="window">
 
+                    </div>
+                </div>
             </section>
 
         </main>

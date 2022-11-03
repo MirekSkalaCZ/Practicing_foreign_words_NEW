@@ -78,12 +78,204 @@ body {
     display: table;
 }
 
+/**** Navigation ****/
+
+nav {
+    margin-top: 80px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color-text);
+    padding: 20px 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/****************************************************/
+
+/**** Btns + Inputs styles ****/
+
+/* Btns */
+
+.btn p {
+    margin-top: 25px;
+    color: var(--primary-color-text);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn p:hover {
+    opacity: 0.7;
+    color: orange;
+}
+
+.btn input {
+    margin-top: 25px;
+    color: var(--primary-color-text);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.btn input:hover {
+    opacity: 0.7;
+    color: orange;
+}
+
+/* Inputs */
+
+.input input {
+    font-size: 20px;
+    padding: 10px 5px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 350px;
+}
+
+.input input:focus {
+    outline-color: orange;
+}
+
+/****************************************************/
+
+/**** Windows ****/
+
+#window1, #window2, #window3 {
+    display: none;
+}
+
+.active {
+    display: block !important; 
+}
+
+/****************************************************/
+
+/**** Insert words ****/
+
+.insert_words {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#confirm_text {
+    padding-top: 15px;
+    color: orange;
+}
+
+/****************************************************/
+
+/**** Practice ****/
+
+.practice {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#btn_practice_open {
+    display: block;
+}
+
+#practice_window {
+    display: none;
+}
+
+.practice h2 {
+    margin-bottom: 35px;
+}
+
+/* Score */
+
+.total_score p {
+    margin-bottom: 10px;
+    color: var(--primary-color-text);
+}
+
+/* Randomize btn */
+
+.randomize_btn p {
+    margin: 35px 0;
+    color: var(--primary-color-text);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.randomize_btn p:hover {
+    opacity: 0.7;
+    color: orange;
+}
+
+/* First Practice */
+
+.flip_box {
+    background-color: transparent;
+    width: 350px;
+    height: 100px;
+    border: 1px solid grey;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.flip_box_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip_box:hover .flip_box_inner {
+    transform: rotateX(180deg);
+}
+
+.flip_box_front, .flip_box_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip_box_front {
+    background-color: black;
+    color: orange;
+}
+
+.flip_box_front, .flip_box_back {
+    padding-top: 35px;
+}
+
+.flip_box_back {
+    background-color: orange;
+    color: black;
+    transform: rotateX(180deg);
+}
+
+/* Second Practice */
+
+.true {
+    color: rgb(22, 196, 22);
+}
+
+.false {
+    color: rgb(253, 21, 21);
+}
+
 /****************************************************/
 
 /**** Footer ****/
 
 .footer_section {
-    margin-top: 250px;
+    margin-top: 60vh;
     text-align: center;
 }
 

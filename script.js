@@ -51,3 +51,24 @@ function printText(){
 }
     
 printText();
+
+/**** Toggle Windows ****/
+
+let windows = document.querySelectorAll(".window");
+
+for(let i = 1; i <= 3; i++){
+    let btn = document.getElementById("btn" + i);
+
+    let window = document.getElementById("window" + i);
+
+    btn.onclick = function(){
+        deleteActiveClass();
+        window.classList.add("active");
+    }
+
+    function deleteActiveClass(){
+        windows.forEach(function(allWindows){
+            allWindows.classList.remove("active");
+        });
+    }
+}
