@@ -28,19 +28,19 @@ const saveWords = function(oneWord){
 
 const generateHTML = function(oneWord){
 
-    const newDiv = document.createElement("tr");
-    const newSpan = document.createElement("td");
-    const newSpan2 = document.createElement("td");
+    const newTr = document.createElement("tr");
+    const newTd = document.createElement("td");
+    const newTd2 = document.createElement("td");
     const button = document.createElement("td");
 
-    newSpan.textContent = oneWord.foreign;
-    newDiv.appendChild(newSpan);
+    newTd.textContent = oneWord.foreign;
+    newTr.appendChild(newTd);
 
-    newSpan2.innerHTML = oneWord.native;
-    newDiv.appendChild(newSpan2);
+    newTd2.innerHTML = oneWord.native;
+    newTr.appendChild(newTd2);
 
     button.innerHTML = "<i class='fa-solid fa-trash-can rmv_btn'></i>";
-    newDiv.appendChild(button);
+    newTr.appendChild(button);
 
     /* Remove Btn */
 
@@ -50,7 +50,7 @@ const generateHTML = function(oneWord){
         updateList();
     });
 
-    return newDiv;
+    return newTr;
 }
 
 /* Remove words from JSON */
