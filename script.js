@@ -57,6 +57,6 @@ const trueText = function(){
 
 const falseText = function(){
 
-    practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>"
+    practice_result.innerHTML = "<span class='false'>Špatná odpověď</span>";
 
 }

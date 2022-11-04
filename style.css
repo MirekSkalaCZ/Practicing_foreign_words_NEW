@@ -108,6 +108,7 @@ nav a:hover {
     color: var(--primary-color-text);
     font-size: 20px;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn p:hover {
@@ -271,6 +272,9 @@ nav a:hover {
     text-align: center;
     margin-top: 100px;
     color: var(--primary-color-text);
+    max-height: 350px;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 #list {
@@ -289,10 +293,11 @@ nav a:hover {
     border: 3px solid var(--primary-color-text);
     padding: 10px 15px;
     background-color: orange;
-    min-width: 250px;
+    width: 250px;
 }
 
 #list td {
+    max-width: 250px;
     padding: 10px 15px;
     cursor: default;
 }
@@ -304,6 +309,22 @@ nav a:hover {
 .rmv_btn:hover {
     color: orange;
 }
+
+/* Scrollbar Design */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(236, 235, 235);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+}
+
+
 
 /****************************************************/
 

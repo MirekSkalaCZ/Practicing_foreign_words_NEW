@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Procvičování - 1000 slov</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/queries.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+    <body>
+        
+        <header>
+            <div class="container">
+                <div class="language row">
+                    <a href="#"><img src="../images/moon.png" id="icon_dm"></a>
+                </div>
+                <!-- Welcome text -->
+                <div class="welcome_text">
+                    <h1 id="text"></h1>
+                </div>
+                <nav>
+                    <a id="btn1">Začni procvičovat</a>
+                    <a id="btn2">Seznam slov</a>
+                    <a href="../index.html">Zpět na procvičování</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Practice section -->
+            <section>
+                <div class="container">
+                    <div id="window1" class="window">
+                        <div class="practice">
+                                <!-- Score -->
+                                <div class="total_score">
+                                    <p><span id="score">0</span> / <span id="round_count">0</span> (<span id="percents">0</span>%)</p>
+                                </div>
+        
+                                <!-- First Practice -->
+                                <div class="first_practice">
+                                    <div class="flip_box">
+                                        <div class="flip_box_inner">
+                                            <div class="flip_box_front">
+                                                <h2 id="random_foreign_word"></h2>
+                                            </div>
+                                            <div class="flip_box_back">
+                                                <h2 id="random_native_word"></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="randomize_btn btn">
+                                    <p id="randomize_btn">Ukaž slovo</p>
+                                </div>
+        
+                                <!-- Second Practice -->
+                                <div class="second_practice input">
+                                    <p id="practice_result"></p>
+                                    <form id="practice_form">
+                                        <input type="text"  name="native_word_practice" id="native_word_practice" placeholder="Napište český překlad">
+                                        <div class="btn">
+                                            <input type="submit" id="btn_practice_submit" value="Odeslat">
+                                        </div>
+                                    </form>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Word List -->
+            <section>
+                <div class="container">
+                    <div id="window2" class="window">
+                        <div class="word_list">
+                            <table id="list">
+                                <tr><th>Cizí slovo</th><th>České slovo</th></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer_section">
+                <div class="footer_text">
+                    <p><span>Kontakt:</span></p>
+                    <a href="mailto:mirek.skala@seznam.cz">E-Mail</a>
+                    <br>
+                    <p><span>Webová stránka:</span></p>
+                    <a href="https://motyli-prahy.cz" target="_blank">Motýli Prahy</a>
+                    <p>Copyright &copy; 2022 Miroslav Skála. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="script_1000_words.js"></script>
+    </body>
+</html>

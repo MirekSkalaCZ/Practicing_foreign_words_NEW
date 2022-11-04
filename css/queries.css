@@ -30,6 +30,8 @@
 @media screen and (max-width: 550px) {
 
     .welcome_text {
+        padding: 0 10px;
+        top: 20px;
         position: absolute;
     }
 
@@ -37,4 +39,11 @@
         margin-top: 200px;
     }
 
+    #list th {
+        width: 150px;
+    }
+
+    #list td {
+        max-width: 150px;
+    }
 }
