@@ -294,14 +294,15 @@ nav a:hover {
 
 #list td {
     padding: 10px 15px;
-}
-
-#list tr:hover {
-    background-color: orange;
+    cursor: default;
 }
 
 .rmv_btn {
     cursor: pointer;
+}
+
+.rmv_btn:hover {
+    color: orange;
 }
 
 /****************************************************/
