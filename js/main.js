@@ -114,7 +114,7 @@ btn_randomize.addEventListener("click", function(){
     practice_result.innerHTML = "";
     native_word_practice.value = "";
     /* Generate Random Number */
-    var random_number = Math.ceil((Math.random() * object_length) - 1);   
+    var random_number = Math.ceil((Math.random() * object_length) - 1);  
     /* Show random word from array */
     random_foreign.innerText = my_storage_JSON[random_number].foreign;
     random_native.innerText = my_storage_JSON[random_number].native;

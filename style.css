@@ -274,35 +274,34 @@ nav a:hover {
 }
 
 #list {
-    display: block;
-    max-width: 350px;
     margin: 0 auto;
-}
-
-#list div {
-    padding: 10px 0;
-}
-
-#list span {
-    margin: 50px 50px;
-    width: 150px;
-}
-
-#list button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: var(--primary-color-text);
-    max-width: 50px;
-}
-
-#list button:hover {
-    color: orange;
-}
-
-.fa-trash-alt:before, .fa-trash-can:before {
+    position: relative;
     text-align: center;
-    margin: 25px;
+}
+
+#list table {
+    text-align: center;
+    border-collapse: collapse;
+    color: var(--primary-color-text);
+}
+
+#list th {
+    border: 3px solid var(--primary-color-text);
+    padding: 10px 15px;
+    background-color: orange;
+    min-width: 250px;
+}
+
+#list td {
+    padding: 10px 15px;
+}
+
+#list tr:hover {
+    background-color: orange;
+}
+
+.rmv_btn {
+    cursor: pointer;
 }
 
 /****************************************************/

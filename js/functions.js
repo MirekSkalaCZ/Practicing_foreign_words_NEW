@@ -28,18 +28,18 @@ const saveWords = function(oneWord){
 
 const generateHTML = function(oneWord){
 
-    const newDiv = document.createElement("div");
-    const newSpan = document.createElement("span");
-    const newSpan2 = document.createElement("span");
-    const button = document.createElement("button");
+    const newDiv = document.createElement("tr");
+    const newSpan = document.createElement("td");
+    const newSpan2 = document.createElement("td");
+    const button = document.createElement("td");
 
     newSpan.textContent = oneWord.foreign;
     newDiv.appendChild(newSpan);
 
-    newSpan2.textContent = oneWord.native;
+    newSpan2.innerHTML = oneWord.native;
     newDiv.appendChild(newSpan2);
 
-    button.innerHTML = "<i class='fa-solid fa-trash-can'></i>";
+    button.innerHTML = "<i class='fa-solid fa-trash-can rmv_btn'></i>";
     newDiv.appendChild(button);
 
     /* Remove Btn */
@@ -70,7 +70,7 @@ const removeWord = function(id){
 
 const updateList = function(){
 
-    document.getElementById("list").innerHTML = "";
+    document.getElementById("list").innerHTML = "<tr><th>Cizí slovo</th><th>České slovo</th></tr>";
 
     let new_data = getInputWords();
 
