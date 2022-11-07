@@ -324,8 +324,36 @@ nav a:hover {
     background-color: orange;
 }
 
+/****************************************************/
 
+/**** 1000 words - Statics ****/
 
+#score_table table {
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+#score_table th {
+    border: 3px solid var(--primary-color-text);
+    padding: 10px 15px;
+    background-color: orange;
+}
+
+.style_th {
+    width: 250px;
+}
+
+#score_table td {
+    padding: 10px 15px;
+    max-width: 250px;
+    cursor: default;
+}
+/*
+#myPlot {
+    margin: 50px auto 80px auto;
+    display: block;
+}
+*/
 /****************************************************/
 
 /**** Footer ****/

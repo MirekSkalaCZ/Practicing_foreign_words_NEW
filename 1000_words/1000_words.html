@@ -24,6 +24,7 @@
                 <nav>
                     <a id="btn1">Začni procvičovat</a>
                     <a id="btn2">Seznam slov</a>
+                    <a id="btn3">Statistika</a>
                     <a href="../index.html">Zpět na procvičování</a>
                 </nav>
             </div>
@@ -36,6 +37,9 @@
                     <div id="window1" class="window">
                         <div class="practice">
                                 <!-- Score -->
+                                <div class="btn">
+                                    <p id="score_btn">Ulož výsledek</p>
+                                </div>
                                 <div class="total_score">
                                     <p><span id="score">0</span> / <span id="round_count">0</span> (<span id="percents">0</span>%)</p>
                                 </div>
@@ -80,13 +84,25 @@
                     <div id="window2" class="window">
                         <div class="word_list">
                             <table id="list">
-                                <tr><th>Cizí slovo</th><th>České slovo</th></tr>
                             </table>
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- Statistics -->
+            <section>
+                <div class="container">
+                    <div id="window3" class="window">
+                        <!--<div id="myPlot" style="width:100%;max-width:700px"></div>-->
+                        <div class="score_table">
+                            <div id="score_table"></div>
+                        </div>
+                        <div class="btn">
+                            <p id="chart_btn">Graf <i>(zatím nefunkční)</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -102,6 +118,8 @@
             </div>
         </footer>
 
+        <!-- PlotCharts -->
+        <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
         <!-- JavaScript -->
         <script src="script_1000_words.js"></script>
     </body>
