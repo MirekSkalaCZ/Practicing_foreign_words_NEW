@@ -202,6 +202,8 @@ function createList(){
 
 createList();
 
+/* Filter */
+
 /**** Statistics ****/
 
 /* Extract score */

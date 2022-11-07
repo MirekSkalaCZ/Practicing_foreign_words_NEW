@@ -21,7 +21,7 @@ body {
 .welcome_text {
     position: relative;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 50px;
     color: var(--primary-color-text);
 }
 
@@ -362,44 +362,14 @@ nav a:hover {
     display: block;
 }
 */
-/****************************************************/
 
-/**** Footer ****/
+/* Filter List */
 
-.footer_section {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: 110px;
+.filter {
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.footer_text span {
-    font-size: 18px;
-    font-weight: 700;
-}
 
-.footer_text a {
-    text-decoration: none;
-    color: var(--primary-color-text);
-    cursor: pointer;
-}
 
-.footer_text a:hover {
-    color: orange;
-}
-
-.footer_text a:focus {
-    outline: none;
-}
-
-.footer_text {
-    margin-top: 10px;
-    color: var(--primary-color-text);
-}
-
-.copyright {
-    position: relative;
-    padding-top: 140px;
-    text-align: center;
-}
