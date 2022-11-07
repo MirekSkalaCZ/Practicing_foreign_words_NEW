@@ -328,6 +328,14 @@ nav a:hover {
 
 /**** 1000 words - Statics ****/
 
+#score_window {
+    display: block;
+}
+
+#chart_window {
+    display: none;
+}
+
 #score_table table {
     margin: 50px auto 0 auto;
     text-align: center;

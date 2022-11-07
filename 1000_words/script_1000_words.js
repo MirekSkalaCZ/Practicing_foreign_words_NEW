@@ -223,11 +223,25 @@ function creatResultsTable(){
 
 creatResultsTable();
 
+/* Score and Chart Toggle */
+/*
+let chart_btn = document.getElementById("chart_btn");
+
+chart_btn.addEventListener("click", function(){
+
+    let score_window = document.getElementById("score_window");
+    score_window.style.display = "none";
+
+    if(score_window.style.display == "none"){
+        let chart_window = document.getElementById("chart_window");
+        chart_window.style.display = "block";
+    }
+});
+*/
 
 /* Chart */
+
 /*
-
-
 let practice_length = my_storage_score.length;
 
 var xArray = [];
