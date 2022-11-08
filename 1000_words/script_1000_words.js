@@ -236,28 +236,32 @@ var storage_score = localStorage.getItem("score");
 
 var my_storage_score = JSON.parse(storage_score);
 
-/* Function Toggle Windows */
-
-function openTable(){
+score_btn1.addEventListener("click", function(){
 
     my_storage_score.forEach(function(oneTable){
         const oneTableHTML = generateScoreTable(oneTable);
         document.getElementById("score_table").appendChild(oneTableHTML);
-    })
+    });
 
-}
+})
 
-function openChart(){
+/* Score Chart */
+
+let chart_btn = document.getElementById("score_btn2");
+
+chart_btn.addEventListener("click", function(){
 
     let score_window = document.getElementById("score_window1");
     score_window.style.display = "none";
-    
+
     if(score_window.style.display == "none"){
         let chart_window = document.getElementById("score_window2");
-            chart_window.style.display = "block";
+        chart_window.style.display = "block";
     }
-    
-}
+
+});
+
+
 /* Chart */
 
 let practice_length = my_storage_score.length;
