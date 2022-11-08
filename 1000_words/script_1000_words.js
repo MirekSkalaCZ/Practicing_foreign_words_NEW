@@ -81,9 +81,7 @@ for(let i = 1; i <= 3; i++){
 
 /**** Practicing ****/
 
-/* Object Length */
-
-/* Could be czech_word.length */
+/* Object Length - Could be czech_word.length */
 
 let arr_length = english_word.length;
 
@@ -159,6 +157,9 @@ btn_randomize.addEventListener("click", function(){
 
 let score_btn = document.getElementById("score_btn");
 
+let date = new Date();
+let current_date = date.getDate() + "." + (date.getMonth() + 1) + ".";
+
 score_btn.addEventListener("click", function(){
 
     if(localStorage.getItem("score") == null){
@@ -167,7 +168,11 @@ score_btn.addEventListener("click", function(){
         score_array = JSON.parse(localStorage.getItem("score"));
     }
 
-    score_array.push(one_percents.innerText);
+    score_array.push({
+        id: score_array.length + 1,
+        score_value: one_percents.innerText
+    });
+
     var score_arrayToJSON = JSON.stringify(score_array);
     localStorage.setItem("score", score_arrayToJSON);
     
@@ -182,6 +187,8 @@ function nullValues(){
     one_percents.innerText = "0";
     one_score.innerText = "0";
     round_count.innerText = "0";
+
+    location.reload();
 
 }
 
@@ -206,66 +213,88 @@ createList();
 
 /**** Statistics ****/
 
-/* Extract score */
+/* Score Table */
+
+const generateScoreTable = function(oneTable){
+
+    const newTr = document.createElement("tr");
+    const newTd = document.createElement("td");
+    const newTd2 = document.createElement("td");
+
+    newTd.textContent = oneTable.id;
+    newTr.appendChild(newTd);
+
+    newTd2.textContent = oneTable.score_value + "%";
+    newTr.appendChild(newTd2);
+
+    return newTr;
+}
+
+let score_btn1 = document.getElementById('score_btn1');
 
 var storage_score = localStorage.getItem("score");
 
 var my_storage_score = JSON.parse(storage_score);
 
-function creatResultsTable(){
+score_btn1.addEventListener("click", function(){
 
-    let table = "<table><tr><th>Pořadí</th><th class='style_th'>Výsledek</th></tr>"
-    for (let x in my_storage_score){
-        table += "<tr><td>" + x + "</td><td>" + my_storage_score[x] + "%" + "</td></tr>";
-    }
-    table += "</table>"
+    my_storage_score.forEach(function(oneTable){
+        const oneTableHTML = generateScoreTable(oneTable);
+        document.getElementById("score_table").appendChild(oneTableHTML);
+    });
 
-    document.getElementById("score_table").innerHTML = table;
-}
+    /*score_btn1.style.display = "none";*/
+    
+})
 
-creatResultsTable();
+/* Score Chart */
 
-/* Score and Chart Toggle */
-/*
-let chart_btn = document.getElementById("chart_btn");
+let chart_btn = document.getElementById("score_btn2");
 
 chart_btn.addEventListener("click", function(){
 
-    let score_window = document.getElementById("score_window");
+    let score_window = document.getElementById("score_window1");
     score_window.style.display = "none";
 
     if(score_window.style.display == "none"){
-        let chart_window = document.getElementById("chart_window");
+        let chart_window = document.getElementById("score_window2");
         chart_window.style.display = "block";
     }
+
+    /*chart_btn.style.display = "none";
+    
+    if(chart_btn.style.display == "none"){
+        score_btn1.style.display = "block";
+    }*/
 });
-*/
 
 /* Chart */
 
-/*
 let practice_length = my_storage_score.length;
 
-var xArray = [];
-var yArray = [0,1];
+let xArray = [];
 
-for (let i in my_storage_score.score) {
-    xArray += [my_storage_score.score[i]];
+let yArray = [];
+
+for(let x in my_storage_score){
+    xArray += my_storage_score[x].id + ", ";
+    yArray += my_storage_score[x].score_value + ", ";
 }
 
-console.log(xArray)
+console.log(xArray);
+console.log(yArray);
 var data = [{
-x: xArray,
-y: yArray,
-mode:"lines"
+    x: xArray,
+    y: yArray,
+    mode:"lines"
 }];
     
 var layout = {
-xaxis: {range: [0, 100], title: "Procenta"},
-yaxis: {range: [0, 10], title: "Počet opakování"},  
+xaxis: {range: [1, practice_length], title: "Opakování"},
+yaxis: {range: [1, 100], title: "Procenta"},  
 title: "Graf úspěšnosti"
 };
     
 Plotly.newPlot("myPlot", data, layout);
-*/
+
     

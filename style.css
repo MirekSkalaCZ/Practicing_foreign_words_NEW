@@ -328,15 +328,15 @@ nav a:hover {
 
 /**** 1000 words - Statics ****/
 
-#score_window {
+#score_window1 {
     display: block;
 }
 
-#chart_window {
+#score_window2 {
     display: none;
 }
 
-#score_table table {
+#score_table {
     margin: 50px auto 0 auto;
     text-align: center;
 }
@@ -356,12 +356,11 @@ nav a:hover {
     max-width: 250px;
     cursor: default;
 }
-/*
+
 #myPlot {
     margin: 50px auto 80px auto;
-    display: block;
 }
-*/
+
 
 /* Filter List */
 
