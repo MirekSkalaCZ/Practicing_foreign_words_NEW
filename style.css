@@ -328,12 +328,12 @@ nav a:hover {
 
 /**** 1000 words - Statics ****/
 
-#score_window1 {
-    display: block;
+#score_window1, #score_window2 {
+    display: none;
 }
 
-#score_window2 {
-    display: none;
+.score_active {
+    display: block !important;
 }
 
 #score_table {
@@ -358,9 +358,23 @@ nav a:hover {
 }
 
 #myPlot {
-    margin: 50px auto 80px auto;
+    margin: 50px auto 20px auto;
 }
 
+.score_btns {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.score_btns a {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+.score_btns a:hover {
+    color: orange;
+}
 
 /* Filter List */
 

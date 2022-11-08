@@ -213,6 +213,27 @@ createList();
 
 /**** Statistics ****/
 
+/* Toggle Windows */
+
+let box = document.querySelectorAll(".box");
+
+for(let i = 1; i <= 2; i++){
+    let btn = document.getElementById("score_btn" + i);
+
+    let window = document.getElementById("score_window" + i);
+
+    btn.onclick = function(){
+        deleteActive();
+        window.classList.add("score_active");
+    }
+
+    function deleteActive(){
+        box.forEach(function(allBoxes){
+            allBoxes.classList.remove("score_active");
+        });
+    }
+}
+
 /* Score Table */
 
 const generateScoreTable = function(oneTable){
@@ -230,7 +251,7 @@ const generateScoreTable = function(oneTable){
     return newTr;
 }
 
-let score_btn1 = document.getElementById('score_btn1');
+let score_btn1 = document.getElementById('score_write');
 
 var storage_score = localStorage.getItem("score");
 
@@ -243,26 +264,11 @@ score_btn1.addEventListener("click", function(){
         document.getElementById("score_table").appendChild(oneTableHTML);
     });
 
+    score_btn1.style.display = "none";
+
 })
 
 /* Score Chart */
-
-let chart_btn = document.getElementById("score_btn2");
-
-chart_btn.addEventListener("click", function(){
-
-    let score_window = document.getElementById("score_window1");
-    score_window.style.display = "none";
-
-    if(score_window.style.display == "none"){
-        let chart_window = document.getElementById("score_window2");
-        chart_window.style.display = "block";
-    }
-
-});
-
-
-/* Chart */
 
 let practice_length = my_storage_score.length;
 

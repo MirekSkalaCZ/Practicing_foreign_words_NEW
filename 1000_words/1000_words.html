@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Procvičování - 1000 slov</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../css/queries.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -96,22 +96,21 @@
             <section>
                 <div class="container">
                     <div id="window3" class="window">
-                        <div id="score_window1">
-                            <div class="score_table">
-                                <table id="score_table">
-                                    <tr><th>Pořadí</th><th class='style_th'>Výsledek</th></tr>
-                                </table>
+                        <div class="score_btns btn">
+                            <a id="score_btn1">Ukaž skóre</a>
+                            <a id="score_btn2">Ukaž graf</a>
+                        </div>
+                        <div id="score_window1" class="box">
+                            <table id="score_table">
+                                <tr><th>Pořadí</th><th class='style_th'>Výsledek</th></tr>
+                            </table>
+                            <div class="btn">
+                                <p id="score_write">Vypiš skóre</p>
                             </div>
                         </div>
-                        <div id="score_window2">
+                        <div id="score_window2" class="box">
                             <div id="myPlot" style="width:100%;max-width:700px"></div>
                         </div>  
-                        <div class="btn">
-                            <p id="score_btn1">Ukaž score</p>
-                        </div>
-                        <div class="btn">
-                            <p id="score_btn2">Ukaž graf</p>
-                        </div>                       
                     </div>
                 </div>
             </section>
