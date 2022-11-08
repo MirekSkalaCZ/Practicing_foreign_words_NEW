@@ -198,7 +198,7 @@ function nullValues(){
 
 function createList(){
 
-    let list = "<table><tr><th>Cizí výraz</th><th>Český výraz</th></tr>"
+    let list = "<table><tr class='header'><th>Cizí výraz</th><th>Český výraz</th></tr>"
     for (let x in english_word, czech_word) {
         list += "<tr><td>" + english_word[x] + "</td><td>" + czech_word[x] + "</td></tr>";
     }
@@ -211,6 +211,22 @@ function createList(){
 createList();
 
 /* Filter */
+
+function filterFunction(){
+
+    const trs = document.querySelectorAll("#list tr:not(.header");
+    const filter = document.getElementById("filter_input").value;
+    const regex = new RegExp(filter, "i");
+    const isFoundInTds = td => regex.test(td.innerHTML)
+    const isFound = childrenArr => childrenArr.some(isFoundInTds)
+    const setTrStyleDisplay = ({ style, children }) => {
+    style.display = isFound([
+      ...children 
+    ]) ? '' : 'none' 
+  }
+  
+  trs.forEach(setTrStyleDisplay)
+}
 
 /**** Statistics ****/
 
