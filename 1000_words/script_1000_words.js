@@ -236,38 +236,28 @@ var storage_score = localStorage.getItem("score");
 
 var my_storage_score = JSON.parse(storage_score);
 
-score_btn1.addEventListener("click", function(){
+/* Function Toggle Windows */
+
+function openTable(){
 
     my_storage_score.forEach(function(oneTable){
         const oneTableHTML = generateScoreTable(oneTable);
         document.getElementById("score_table").appendChild(oneTableHTML);
-    });
+    })
 
-    /*score_btn1.style.display = "none";*/
-    
-})
+}
 
-/* Score Chart */
-
-let chart_btn = document.getElementById("score_btn2");
-
-chart_btn.addEventListener("click", function(){
+function openChart(){
 
     let score_window = document.getElementById("score_window1");
     score_window.style.display = "none";
-
+    
     if(score_window.style.display == "none"){
         let chart_window = document.getElementById("score_window2");
-        chart_window.style.display = "block";
+            chart_window.style.display = "block";
     }
-
-    /*chart_btn.style.display = "none";
     
-    if(chart_btn.style.display == "none"){
-        score_btn1.style.display = "block";
-    }*/
-});
-
+}
 /* Chart */
 
 let practice_length = my_storage_score.length;
@@ -277,8 +267,8 @@ let xArray = [];
 let yArray = [];
 
 for(let x in my_storage_score){
-    xArray += my_storage_score[x].id + ", ";
-    yArray += my_storage_score[x].score_value + ", ";
+    xArray.push(my_storage_score[x].id);
+    yArray.push(my_storage_score[x].score_value);
 }
 
 console.log(xArray);
