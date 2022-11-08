@@ -170,7 +170,8 @@ score_btn.addEventListener("click", function(){
 
     score_array.push({
         id: score_array.length + 1,
-        score_value: one_percents.innerText
+        score_value: one_percents.innerText,
+        date: current_date
     });
 
     var score_arrayToJSON = JSON.stringify(score_array);
@@ -241,12 +242,16 @@ const generateScoreTable = function(oneTable){
     const newTr = document.createElement("tr");
     const newTd = document.createElement("td");
     const newTd2 = document.createElement("td");
+    const score_date = document.createElement("td");
 
     newTd.textContent = oneTable.id;
     newTr.appendChild(newTd);
 
     newTd2.textContent = oneTable.score_value + "%";
     newTr.appendChild(newTd2);
+
+    score_date.textContent = oneTable.date;
+    newTr.appendChild(score_date);
 
     return newTr;
 }
