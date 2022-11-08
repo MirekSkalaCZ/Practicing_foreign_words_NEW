@@ -284,8 +284,8 @@ var data = [{
 }];
     
 var layout = {
-xaxis: {range: [1, practice_length], title: "Opakování"},
-yaxis: {range: [1, 100], title: "Procenta"},  
+xaxis: {range: [1, practice_length], title: "Počet výsledků"},
+yaxis: {range: [0, 100], title: "Procenta"},  
 title: "Graf úspěšnosti"
 };
     
