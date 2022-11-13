@@ -143,6 +143,19 @@ btn_randomize.addEventListener("click", function(){
         });  
 });
 
+/* Info Text */
+
+let btn_info = document.getElementById("btn2");
+let info_text = document.getElementById("info_text");
+
+btn_info.addEventListener("click", function(){
+
+    setTimeout(function(){
+        info_text.textContent = "";
+    }, 3000);
+
+})
+
 /* Add words from JSON to page */
 
 let show_list = document.getElementById("show_list");
@@ -158,6 +171,3 @@ show_list.addEventListener("click", function(){
         document.getElementById("list").appendChild(oneWordHTML);
     });
 });
-
-
-
