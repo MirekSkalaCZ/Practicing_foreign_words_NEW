@@ -192,6 +192,10 @@ nav a:hover {
     margin-bottom: 35px;
 }
 
+#info_text {
+    color: var(--primary-color-text);
+}
+
 /* Score */
 
 .total_score p {

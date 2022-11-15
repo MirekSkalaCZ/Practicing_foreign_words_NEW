@@ -317,5 +317,3 @@ title: "Graf úspěšnosti"
 };
     
 Plotly.newPlot("myPlot", data, layout);
-
-    
